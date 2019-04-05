@@ -5,3 +5,6 @@ I am trying basic functionalities of **GitHub** using **Git** from the command l
 
 ## Second
 Added from branch
+
+## Third
+Another thing...
