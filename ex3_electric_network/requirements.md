@@ -56,3 +56,24 @@ epbs -- ps
 | Banking system |                | Web service (APIs)           |
 
 
+## Requirements
+
+### Functional
+| ID | Description                                        |
+|:--:| -------------------------------------------------- |
+| F1 | Read consumption from meter                        |
+| F2 | Store consumption read with contextual information |
+| F3 | Compute bill                						  |
+| F4 | Send bill to customer via email 				      |
+| F5 | Send bill to customer via postal system            |
+
+### Non functional
+| ID  | Type    | Description 										 |
+|:---:|:-------:| -------------------------------------------------- |
+| NF1 | Privacy | Data of customers have to be not visible to others | 
+| NF2 | Domain  | Currency is euro 									 |
+| NF2 | Domain  | Electric consumption is in KWh 					 |
+
+
+## Glossary
+
