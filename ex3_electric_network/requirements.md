@@ -47,13 +47,13 @@ epbs -- ps
 
 ### Interfaces
 
-| Actor          | Physical       | Logical                      |
-| -------------- | -------------- | ---------------------------- |
-| Meter          | electric wires |                              |
-| Customer       |                | Web-page (GUI)               |
-| Email system   |                | Web service, POP, IMAP, SMTP |
-| Postal system  |                | Web service (APIs)           |
-| Banking system |                | Web service (APIs)           |
+| Actor          | Physical            | Logical                      |
+| -------------- | ------------------- | ---------------------------- |
+| Meter          | electric wires      |                              |
+| Customer       | internet connection | Web-page (GUI)               |
+| Email system   | internet connection | Web service, POP, IMAP, SMTP |
+| Postal system  | internet connection | Web service (APIs)           |
+| Banking system | internet connection | Web service (APIs)           |
 
 
 ## Requirements
