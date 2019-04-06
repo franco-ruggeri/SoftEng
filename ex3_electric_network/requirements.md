@@ -77,3 +77,35 @@ epbs -- ps
 
 ## Glossary
 
+```plantuml
+class Customer
+class Meter
+class Contract
+class Bill
+class MeterReading
+
+Customer : ID
+Customer : name
+Customer : surname
+Customer : address
+Meter : ID
+Bill : ID
+Bill : date
+Bill : consumption
+Bill : amount
+Bill : period
+MeterReading : date
+MeterReading : consumption
+
+Customer "1" -- "*" Contract : signs to <
+Contract "1" -- "1" Meter : assigns
+Contract "1" -- "1..*" MeterReading : lists
+Contract "1" -- "*" Bill : generates
+
+Note top of Contract : It is necessary because one customer may have more houses,\nit is not possible to associate a meter to a customer
+```
+![glossary](pictures/glossary.png)
+
+
+
+
