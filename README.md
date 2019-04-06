@@ -1,20 +1,7 @@
 # README
 
-## First
-Edited line, I am trying basic functionalities of **GitHub** using **Git** from the command line.
+## Introduction
+This is a private repository used to experiment things on git.
 
-## Second
-Added from branch
-
-## Third
-Another thing...
-
-## Fourth
-File added to try pull request
-
-## Try image
-![An image](try.jpeg)
-
-
-## Extension
-## AAAA
+# Current usage
+Currently, I am using this repository to work on the Software Engineering course.
