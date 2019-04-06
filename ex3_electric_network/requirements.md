@@ -1,4 +1,4 @@
-## Informal requirements
+## Informal description
 
 Each house connected to the electric network has a meter. The meter computes and stores how much electrical energy (kW hour) is used by the house. 
 
