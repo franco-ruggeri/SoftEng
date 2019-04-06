@@ -1,0 +1,17 @@
+# Exercise 2
+Draw a class diagram to model a system for management of flights and pilots.
+
+An airline operates flights. Each airline has an ID.
+
+Each flight has an ID a departure airport and an arrival airport: an airport has a unique identifier.
+
+Each flight has a pilot and a co-pilot, and it uses an aircraft of a certain type; a flight has also a departure time and an arrival time.
+
+An airline owns a set of aircrafts of different types.
+
+An aircraft can be in a working state or it can be under repair, and in a particular moment an aircraft can be landed or airborne.
+
+A company has a set of pilots: each pilot has an experience level: 1 is minimum, 3 is maximum.
+
+A type of aircraft may need a particular number of pilots, with a different role (Ex. captain, co-pilot, navigator): there must be at least one captain and one co-pilot, and a captain must have a level 3.
+
