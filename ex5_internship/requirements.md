@@ -19,6 +19,36 @@ At this point the internship is recorded in the student's academic career.
 - Identify the three main use cases, and for each use case describe the related scenarios
 
 
+## Use Case Diagram
+```plantuml
+left to right direction
 
+:Student: as s
+:Stage&Job office: as sjo
+:Company: as c
+:Company Tutor: as ct
+:Academic tutor: as at
+
+(Load proposal) as lp
+(Apply for internship) as ai
+(Check formal correctness) as cfc
+(Check credits) as cc
+(Accept proposal) as ap
+(Rate internship) as ri
+(Put mark) as pm
+
+c --> lp
+s --> ai
+sjo --> cfc
+sjo --> ap
+s --> ri
+ct --> ri
+at --> pm
+
+cfc .> cc : include
+```
+![use case diagram](pictures/use_case_diagram.png)
+
+## Scenarios
 
 
