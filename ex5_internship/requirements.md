@@ -76,7 +76,7 @@ Post condition: the request is sent to the stage&job office
 | 5                | Student inserts the professor's name and clicks 'apply' |
 | 6                | System stores the request and sends it to the Stage&Job office |
 
-### Evaluation and mark
+### Internship evaluation
 Precondition: the professor is the tutor of the internship
 Post condition: the grade is registered in the student's career
 
