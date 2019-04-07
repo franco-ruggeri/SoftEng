@@ -28,5 +28,3 @@ software (notably functions provided).
 + Define one scenario describing an unsuccessful measure. 
 + Define the system design
 
-We are assuming that the speed report is sent to the police.
-
