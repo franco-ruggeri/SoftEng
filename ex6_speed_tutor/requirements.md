@@ -95,7 +95,7 @@ Gate "1" -- "*" Picture : produces >
 
 note right of Gate : It contains cameras and sensors\nPoint is A or B
 ```
-![glossary](pictures/glossary_new.png)
+![glossary](pictures/glossary.png)
 
 
 ## Requirements
