@@ -37,6 +37,7 @@ rectangle system {
 u -- mcms
 mcms -- ccs
 ```
+![context diagram](pictures/context_diagram.png)
 
 ### Interfaces
 | Actor              | Physical            | Logical 									|
