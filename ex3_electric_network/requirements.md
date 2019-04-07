@@ -140,4 +140,4 @@ Server -- EmailGateway
 Server -- WebServer
 Server -- BankingGateway
 ```
-
+![system design](pictures/system_design.png)
