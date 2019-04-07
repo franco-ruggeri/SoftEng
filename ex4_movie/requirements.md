@@ -144,3 +144,28 @@ Post condition: the ticket is used
 | 2 | System checks if the ticket is valid for show |
 | 3 | Room gate opens and customer enters |
 | 4 | System sets the ticket as used |
+
+
+## System design
+```plantuml
+class "Multiplex Cinema Management System"
+class Server
+class Printer
+class Gate
+class "Barcode Reader"
+
+Server : +sellTicket()
+Server : +refundTicket()
+Server : +admitToRoom()
+Server : +defineSchedule()
+Server : +printSchedule()
+Gate : +readTicket()
+Gate : +open()
+"Barcode Reader" : +readTicket()
+
+"Multiplex Cinema Management System" o-- "1" Server
+"Multiplex Cinema Management System" o-- "1..*" Gate
+Gate o-- "1" "Barcode Reader"
+Server -- Printer
+```
+![](pictures/system_design.png)
