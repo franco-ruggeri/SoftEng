@@ -17,13 +17,13 @@ In the following you should model this system, including hardware (cameras, comp
 software (notably functions provided).
 
 + Define the stakeholders analysis
-+ Define the context diagram (including relevant interfaces) 
++ Define the context diagram (including relevant interfaces)
 + Define the glossary with a class diagram.
 + Define the functional requirements
-+ Define the non functional requirements 
-+ Define the use case diagram 
-+ Define one scenario describing a successful measurement of the speed of a vehicle. 
-+ Define one scenario describing an unsuccessful measure. 
++ Define the non functional requirements
++ Define the use case diagram
++ Define one scenario describing a successful measurement of the speed of a vehicle.
++ Define one scenario describing an unsuccessful measure.
 + Define the system design
 
 We are assuming that the speed report is sent to the police.
@@ -40,7 +40,9 @@ We are assuming that the speed report is sent to the police.
 | DBMS administrator | Manages the DBMS which system is based on |
 
 
-## Context diagram
+## Context diagram and interfaces
+
+### Context diagram
 ```plantuml
 left to right direction
 skinparam packageStyle rectangle
@@ -55,8 +57,17 @@ rectangle system {
 c -- ts
 ts -- ps
 
-note "Gates and cameras are part of the system" as n
+note "Gates, sensors and cameras are part of the system" as n
 ```
+![context diagram](pictures/context_diagram.png)
+
+### Interfaces
+| Actor | Physical | Logical |
+|:-----:| -------- | ------- |
+| Car | Camera | |
+| Police System | Internet connection | APIs |
+
+Speed reports should be defined (XML, JSON, etc.) and should include number plate of the car, timestamp, speed, link to the picture.
 
 
 ## Glossary
