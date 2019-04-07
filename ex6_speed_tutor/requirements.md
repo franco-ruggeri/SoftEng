@@ -3,15 +3,15 @@
 Traditional speed monitoring systems measure the instantaneous speed of a car on a street,
 following the car for few meters with radar based appliances.
 
-The idea of the **Tutor system** instead is to measure the average speed of a **car** on a long distance (in
+The idea of the Tutor system instead is to measure the average speed of a **car** on a long distance (in
 the order of 1-10 kilometers).
 
-This is made by measuring the time when a car passes at point A, the time when the same car passes at point B, and doing simple math to compute the average speed. In point A and B on the highway a gate is built with one or more **cameras** that take pictures of cars passing, triggered by a motion sensor.
+This is made by measuring the time when a car passes at point A, the time when the same car passes at point B, and doing simple math to compute the average speed. In point A and B on the highway a **gate** is built with one or more cameras that take pictures of cars passing, triggered by a motion sensor.
 
-The pictures, along with the time when they were shot, are sent to a computer based system
+The **pictures**, along with the **time** when they were shot, are sent to a **computer based system**
 for processing.
 
-The output is the average speed of each car passed through the gates.
+The output is the **average speed** of each car passed through the gates.
 
 In the following you should model this system, including hardware (cameras, computers) and
 software (notably functions provided).
@@ -71,6 +71,27 @@ Speed reports should be defined (XML, JSON, etc.) and should include number plat
 
 
 ## Glossary
+```plantuml
+class Gate
+class Picture
+class "Speed Report"
+class "Speed Computer"
+
+Gate : ID
+Gate : location
+Picture : ID
+Picture : timestamp
+Picture : filename
+Picture : path
+"Speed Report" : number of plate
+"Speed Report" : timestamp
+"Speed Report" : average speed
+
+Gate "1" -- "*" Picture : takes >
+"Speed Computer" "1" -- "*" Picture : receives >
+"Speed Computer" "1" -- "*" "Speed Report" : produces >
+```
+![glossary](pictures/glossary.png)
 
 
 ## Requirements
