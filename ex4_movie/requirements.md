@@ -1,10 +1,10 @@
 # Multiplex cinema management.
 
-A multiplex cinema is composed of several rooms, each room may show a different movie, with a different schedule. Each room has a specific seat capacity, to be strictly enforced for safety regulations.
+A **multiplex cinema** is composed of several **rooms**, each room may show a different **movie**, with a different schedule. Each room has a specific seat capacity, to be strictly enforced for safety regulations.
 
-Each seat in a room has an id. A management system for a multiplex cinema has to be built because there are several multiplex cinemas across Italy.
+Each **seat** in a room has an id. A management system for a multiplex cinema has to be built because there are several multiplex cinemas across Italy.
 
-The management system will be used by clerks to sell tickets at a counter in the cinema. The sale of a ticket can also be done via Internet, the customers buys it connecting to a web site. A ticket is valid for a specific seat, in a specific room, for a specific show (movie and start time).
+The management system will be used by clerks to sell **tickets** at a counter in the cinema. The sale of a ticket can also be done via Internet, the customers buy it connecting to a web site. A ticket is valid for a specific seat, in a specific room, for a specific **show** (movie and start time).
 
 A ticket is unique and has a bar code. The ticket must be printed to guarantee admission. A ticket is sold only in the same day of the show, and only if there is a seat available. The user can choose the seat. A ticket is refundable, if not used.
 
@@ -47,5 +47,37 @@ mcms -- ccs
 
 ## Glossary
 ```plantuml
+class MultiplexCinema
+class Room
+class Movie
+class Seat
+class Ticket
+class Show
 
+MultiplexCinema : ID
+MultiplexCinema : name
+Room : ID
+Room : seat capacity
+Movie : ID
+Movie : title
+Seat : ID
+Ticket : bar code
+Ticket : used
+Ticket : refundable
+Show : start time
+Show : end time
+
+MultiplexCinema o-- "1..*" Room
+Room o-- "1..*" Seat
+Ticket "*" -- "1" Seat : books >
+Ticket "*" -- "1" Show : is for >
+Show "*" -- "1" Movie : projects >
+Show "*" -- "1" Room : takes place >
+
+Note top of Ticket : sold only in the same day of the show\nand if there is a seat available
 ```
+![glossary](pictures/glossary.png)
+
+
+## Use case diagram
+
