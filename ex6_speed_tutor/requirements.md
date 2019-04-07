@@ -72,31 +72,61 @@ Speed reports should be defined (XML, JSON, etc.) and should include number plat
 
 ## Glossary
 ```plantuml
-class Gate
-class Picture
-class "Speed Report"
-class "Speed Computer"
+class SpeedComputer {
+  +distanceAtoB
+}
 
-Gate : ID
-Gate : location
-Picture : ID
-Picture : timestamp
-Picture : filename
-Picture : path
-"Speed Report" : number of plate
-"Speed Report" : timestamp
-"Speed Report" : average speed
+class CarSpeedReport {
+ +carNumberPlate
+ +timestamp
+ +speed
+ +time_A
+ +time_B
+ +pathToPictureA
+ +pathToPictureB
+}
 
-Gate "1" -- "*" Picture : takes >
-"Speed Computer" "1" -- "*" Picture : receives >
-"Speed Computer" "1" -- "*" "Speed Report" : produces >
+class Picture {
+ +ID
+ +fileName
+ +filePath
+}
+
+class Gate {
+  +ID
+  +location
+}
+
+SpeedComputer "1" -- "1..*" CarSpeedReport : produces
+SpeedComputer "1" -- "*" Picture : receives
+
+
+"Gate" "1" -- "*" Picture : takes
 ```
 ![glossary](pictures/glossary.png)
 
 
 ## Requirements
 ### Functional requirements
+| ID | Description |
+|:--:| ----------- |
+| F1 | Compute the speed |
+| F1.1 | Sense car |
+| F1.2 | Take picture of car |
+| F1.3 | Process pictures of car (recognize number of plate of car) |
+| F2 | Produce speed report |
+| F3 | Send speed report |
+
 ### Non functional requirements
+| ID | Type | Description | Refers to |
+|:--:|:----:| ----------- |:---------:|
+| NF1 | Domain | Speed is in km/h | F1 |
+| NF2 | Reliability | Unsuccessful measurements shall be less than 5% of the total | F1 |
+| NF3 | Reliability | System downtime shall be less than 30 minutes per week | F1, F2 |
+| NF4 | Efficiency | Speed reports shall be produced in less than 2 minutes | F2 |
+| NF5 | Legislative | Speed reports shall be sent to police in less than 60 days | F3 |
+| NF6 | Privacy | Sensitive data shall be reserved | F2 |
+| NF7 | Reliability | Computed speed shall be less than 5% different from real speed | F1 |
 
 
 ## Use case diagram
