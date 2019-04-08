@@ -121,7 +121,7 @@ note right of st : Clerk and customer uses\nthe same procedure (web site)
 ## Scenarios
 ### Successful sale for a ticket for a movie
 
-Precondition: there is at least one seat available for the show and it is the same day of the show
+Precondition: there is at least one seat available for the show and it is the same day of the show  
 Post condition: the selected seat is occupied
 
 | Scenario ID: SC1 | Corresponds to UC: Sell ticket |
@@ -134,7 +134,7 @@ Post condition: the selected seat is occupied
 
 ### Successful admission to a room
 
-Precondition: customer has a valid ticket and has already passed the first row of gates
+Precondition: customer has a valid ticket and has already passed the first row of gates  
 Post condition: the ticket is used
 
 | Scenario ID: SC2 | Corresponds to UC: Admit to room |

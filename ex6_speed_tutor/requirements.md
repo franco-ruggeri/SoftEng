@@ -148,7 +148,7 @@ ssr .> psr : include
 
 ## Scenarios
 ### Successful measurement of the speed of a vehicle
-Precondition: car passes between the gates
+Precondition: car passes between the gates  
 Postcondition: average speed is computed
 
 | Scenario ID: SC1 | Corresponds to UC: Compute speed |
@@ -162,7 +162,7 @@ Postcondition: average speed is computed
 | 6 | Speed Computer computes the average speed and writes it in the speed report |
 
 ### Unsuccessful measurement
-Precondition: car passes between the gates
+Precondition: car passes between the gates  
 Postcondition: N/A
 
 | Scenario ID: SC1 | Corresponds to UC: Compute speed |
