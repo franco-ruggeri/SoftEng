@@ -3,3 +3,4 @@
 * add methods for serialization in Transaction
 * remove append:boolean fromo saveObject() in DataImpl
 * add Transaction() (constructor) in Transaction
+* add DataImpl() (constructor) in DataImpl
