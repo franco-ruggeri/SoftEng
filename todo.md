@@ -1,8 +1,8 @@
 ## Changes to do in class diagram
 * remove +Account(balance:int) from LaTazzaAccount
-* remove append:boolean from saveObject() in DataImpl
 * add Transaction() (constructor) in Transaction
 * add DataImpl() (constructor) in DataImpl
-* change loadData() in loadObject() and prototype
+* change loadData() in loadObject() and change prototype (see code)
+* change saveObject() in storeObject() and check prototype (see code)
 * change class Transaction in abstract
-* note "implements Serializable" has to be linked also to LaTazzaAccount
+* link note "Implements Serializable" also to LaTazzaAccount
