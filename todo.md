@@ -11,3 +11,4 @@
 * add Transaction() (constructor) in Transaction
 * change class Transaction in abstract
 * link note "Implements Serializable" also to LaTazzaAccount
+* change "Data persistence" with "Data persistency" in the notes throughout the document (LOOOL)
