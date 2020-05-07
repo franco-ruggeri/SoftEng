@@ -1,7 +1,5 @@
-# README
+# Software Engineering
 
-## Introduction
-This is a private repository used to experiment things on git.
+Exercises for the course Software Engineering at PoliTO.
 
-## Current usage
-Currently, I am using this repository to work on the Software Engineering course.
+This repository was also used to experiment with Git, one of the tools used during the course.
